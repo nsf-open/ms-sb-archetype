@@ -1,0 +1,26 @@
+1) From the trunk directory, type: mvn clean install
+2) Navigate to a new directory outside of the archetype project and type:
+    mvn archetype:generate -DgroupId=[group_id] -DartifactId=[artifact_id] -DarchetypeCatalog=local
+
+    Replace [group_id] with gov.nsf.services.[domain]
+    Replace [artifact_id] with a lowercase string for your service - e.g, for the ProjectReportService, the artifactId should be projectreport
+
+    When prompted: Choose a number or apply filter (format: [groupId:]artifactId, case sensitive contains):
+    Enter: 1
+
+    When prompted: Define value for property 'version' 1.0-SNAPSHOT: :
+    Enter: 0.0.1-SNAPSHOT or 1.0.0-SNAPSHOT
+
+    When prompted: Define value for property 'artifactIdInLowerCase':
+    Enter: the [artifact_id] you chose for the -DartifactId parameter in all lowercase, e.g., projectreport
+
+    When prompted: Define value for property 'mainPojo':
+    Enter: the upper camel cased name of the primary Java POJO of your service, e.g., ProjectReport
+
+    When prompted: Confirm properties configuration:
+    Enter: Y if the details you entered are correct
+
+
+3) From the root directory of the new project build (trunk), type: mvn clean install
+
+mvn archetype:generate -DgroupId=gov.nsf.services.award -DartifactId=projectreport -DarchetypeCatalog=local

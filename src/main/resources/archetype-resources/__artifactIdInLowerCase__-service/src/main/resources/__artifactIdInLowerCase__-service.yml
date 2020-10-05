@@ -1,0 +1,43 @@
+# Spring Boot settings
+security: 
+    basic:
+        enabled: true
+        user:
+            name: change_me
+            password: change_me
+
+spring: 
+    jmx: 
+        enabled: false
+    jpa: 
+        show-sql: true
+        database: SYBASE
+        hibernate:
+            dialect: org.hibernate.dialect.SybaseDialect
+            ddl-auto: none
+            naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
+
+    data:
+        jpa: 
+            repositories: 
+                enabled: true
+
+    jackson: 
+        serialization-inclusion: non_null
+
+endpoints:
+    jmx:
+        enabled: false
+
+application:
+    csd:
+        jdbc-url: #<enter your DB URL>
+        driver-class-name: #<provide db driver class>
+        username: change_me
+        password: change_me
+    flp:
+        jdbc-url: #<enter your DB URL>
+        driver-class-name: #<provide db driver class>
+        username: change_me
+        password: change_me
+
